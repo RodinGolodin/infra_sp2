@@ -102,7 +102,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -128,7 +127,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Папки, создаваемые средой разработки
+# IDE
 .idea
 .DS_Store
 .AppleDouble
@@ -145,7 +144,5 @@ dmypy.json
 
 .mypy_cache
 
-# папки со статикой и медиа
-static/
+# Static and media
 posts/static/
-
