@@ -2,7 +2,7 @@ import uuid
 
 from django.core import exceptions
 from django.core.mail import send_mail
-from rest_framework import exceptions, filters, permissions, status, viewsets
+from rest_framework import filters, permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
