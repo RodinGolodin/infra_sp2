@@ -32,6 +32,7 @@ Python, Django, Nginx, Gunicorn, PostgreSQL
    - Create a superuser: `docker-compose exec web python manage.py createsuperuser`
    - Collect static files: `docker-compose exec web python manage.py collectstatic --no-input`
 4. To test that it works, open http://127.0.0.1:8000/admin/
+5. Populate the database with the initial data by running `docker-compose exec web python manage.py loaddata fixtures.json`.
 
 To stop the containers, run `docker-compose stop`.
 
