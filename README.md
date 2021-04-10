@@ -18,11 +18,11 @@ The application image is available on Docker Hub: https://hub.docker.com/r/serge
 
 Python, Django, Nginx, Gunicorn, PostgreSQL
 
-## Installation and usage
+## Installation and use
 
 > Make sure that you have Docker installed: https://docs.docker.com/get-started/#download-and-install-docker
 
-1. Clone the repository.
+1. Clone the repository: `https://github.com/RodinGolodin/infra_sp2.git`
 2. To start the containers, change to the project directory and run `docker-compose up`.
 3. Open a new terminal and run the following:
    - Apply migrations:
@@ -38,13 +38,17 @@ To stop the containers, run `docker-compose stop`.
 
 To remove the containers, run `docker-compose down`.
 
-If you made any changes, run `docker-compose up -d --build` to force-build the images.
+If you made any changes, run `docker-compose up -d --build` to rebuild the images and start the containers.
+
+### Database configuration
+
+To configure the Postgres database, Docker Compose uses the environment variables defined in the `.env` file at the project root.
 
 ## API guide
 
 ### Authorization
 
-> Prior to attempting the authorization, configure the mail server settings in `settings.py`.
+> For the authorization flow to work, configure your mail server settings in `settings.py`.
 
 1. To get access to the API, make a POST request with your email address to `/api/v1/auth/email`, after which you will receive a confirmation code.
 2. Submit a POST request to `/api/v1/auth/token` with your email address and the confirmation token. In response, you'll receive a JWT token.
@@ -97,6 +101,10 @@ Sample response:
 ## Complete API reference
 
 The full docs are available at http://127.0.0.1/redoc/ or inside the `/static` directory.
+
+## Author
+
+Sergey Rodin, a student at Yandex.Practicum Python Developer program, cohort 10.
 
 ## Contributing
 
