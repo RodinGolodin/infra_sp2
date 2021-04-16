@@ -151,12 +151,12 @@ SIMPLE_JWT = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'sergeyrodin.sr@gmail.com'
-EMAIL_HOST_PASSWORD = 'pastern-uprise-splurge-reid'
-DEFAULT_FROM_EMAIL = 'sergeyrodin.sr@gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = ''
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
